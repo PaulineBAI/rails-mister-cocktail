@@ -7,13 +7,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar d-flex align-items-center">
+      <a href="/cocktails" class="text-decoration-none text-muted"><h3>Simple Cocktail</h3></a>
+      <a href="/cocktails/new" class="text-decoration-none text-muted"><h6>New cocktail</h6></a>
+    </div>
 
+    <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %> <!-- from app/javascript/packs/application.js -->
   </body>
