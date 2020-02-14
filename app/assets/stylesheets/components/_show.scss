@@ -1,0 +1,35 @@
+@import "ingredient_form";
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.show {
+  h3, p {
+    color: #4B8192;
+  }
+  .list {
+    background: #F4F4F4;
+    border-style: none;
+  }
+  .fa-trash-alt:hover {
+    opacity: 0.8;
+  }
+  .btn {
+    background-color: #4B8192;
+    border-color: #4B8192;
+  }
+}
+
+.banner-show {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 35vh;
+  position: relative;
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 15vh;
+    left: 40vw;
+    color: white;
+  }
+}

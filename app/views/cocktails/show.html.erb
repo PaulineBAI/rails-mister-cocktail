@@ -1,13 +1,24 @@
-<h1><%= @cocktail.name %></h1>
-
-<% @cocktail.doses.each do |dose| %>
-  <div class="card">
-    <p><%= Ingredient.find(dose.ingredient_id).name %></p>
-    <p><%= dose.description %></p>
-    <p><%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, crop: :fill %>')">
+  <h1><%= @cocktail.name %></h1>
+</div>
+<div class="container mt-4 mb-5 show">
+  <h3 class="mb-4">Ingredients</h3>
+  <div class="list">
+    <% @cocktail.doses.each do |dose| %>
+        <p><%= Ingredient.find(dose.ingredient_id).name %>  -  <%= dose.description %>
+          <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="far fa-trash-alt ml-3" style="color: #4b8192"></i>
+          <% end %>
+          </p>
+    <% end %>
   </div>
-<% end %>
+  <p><%= link_to 'Add an ingredient', cocktail_path(@cocktail), class: "btn btn-primary mt-4", id: 'add-ingredient' %></p>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient, order: :name %>
+    <%= f.input :description %>
+    <%= f.submit class: 'btn btn-added' %>
+  <% end %>
+</div>
 
-<p><%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %></p>
 
 

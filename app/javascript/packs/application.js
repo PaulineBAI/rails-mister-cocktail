@@ -17,5 +17,12 @@
 
 import 'bootstrap';
 import { loadDynamicBannerText } from '../components/banner';
+import { initAddIngredient } from '../components/btn_add_ingredient';
+import { initSelect2 } from '../plugins/select2';
+
 
 loadDynamicBannerText();
+
+initAddIngredient();
+
+// initSelect2();

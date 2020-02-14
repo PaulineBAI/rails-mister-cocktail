@@ -1,0 +1,22 @@
+.card {
+  height: 25vh;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 5px;
+  box-shadow: 0 10px 6px -6px #777;
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .card-title:hover {
+    opacity: 0.8;
+  }
+
+  li {
+    color: white;
+  }
+}
+
+
+
+

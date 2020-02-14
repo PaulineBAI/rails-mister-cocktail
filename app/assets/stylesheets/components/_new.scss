@@ -1,0 +1,26 @@
+.new {
+  background-image: asset-url('banner.png');
+  background-repeat: no-repeat;
+  background-position: 10% 30%;
+  height: 100vh;
+  position: relative;
+
+  form {
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  box-shadow: 6px 10px 6px -6px #777;
+  border-radius: 5px;
+  padding: 30px;
+  }
+
+  label {
+    color: #4B8192;
+  }
+
+  .btn {
+    background-color: #4B8192;
+    border-color: #4B8192;
+  }
+}
